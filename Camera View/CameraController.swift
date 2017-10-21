@@ -72,6 +72,10 @@ class CameraController: UIViewController {
         cameraButton.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
     }
     
+    func captureVideoOutput(){
+        print("Video")
+    }
+    
 
 }
 
