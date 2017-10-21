@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraController" customModule="Camera_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3f5-O9-3dH">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5O-nJ-3zY">
+                                <rect key="frame" x="462" y="1216" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Siy-S2-pyd"/>
+                                    <constraint firstAttribute="height" constant="100" id="qgH-cb-VVp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4aZ-dq-bod"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-QB-pFC">
+                                <rect key="frame" x="874" y="1216" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cfU-Di-dtB"/>
+                                    <constraint firstAttribute="width" constant="100" id="pDD-n4-8cx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j5O-nJ-3zY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Fp-iR-v30"/>
+                            <constraint firstItem="3f5-O9-3dH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AHo-3k-VJy"/>
+                            <constraint firstItem="3f5-O9-3dH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ggb-6s-h3d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j5O-nJ-3zY" secondAttribute="bottom" constant="50" id="KVe-fd-Qek"/>
+                            <constraint firstItem="3f5-O9-3dH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XYx-MD-FMP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eN6-QB-pFC" secondAttribute="trailing" constant="50" id="rNi-cl-J8Y"/>
+                            <constraint firstItem="3f5-O9-3dH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="raG-4F-Wa0"/>
+                            <constraint firstItem="j5O-nJ-3zY" firstAttribute="top" secondItem="eN6-QB-pFC" secondAttribute="bottom" constant="-100" id="xtS-Dq-f6c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="j5O-nJ-3zY" id="Gt7-U6-Q7V"/>
+                        <outlet property="previewLayer" destination="3f5-O9-3dH" id="2IS-qU-hBJ"/>
+                        <outlet property="takenImageView" destination="eN6-QB-pFC" id="oEI-yM-vpF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80.2734375" y="132.8125"/>
+        </scene>
+    </scenes>
+</document>
